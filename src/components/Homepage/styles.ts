@@ -35,6 +35,21 @@ export const Content = styled.div`
     h1 {
         color: #fff;
     }
+
+    h2 {
+        text-align: center;
+        margin-top: 6px;
+
+        span {
+            color: #e42121;
+            background: #f6b0b0;
+            border: 2px solid #e42121;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 400;
+            padding: 5px 30px;
+        }
+    }
 `;
 
 export const ContentTable = styled.div`

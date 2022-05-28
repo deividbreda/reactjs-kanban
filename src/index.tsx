@@ -6,6 +6,8 @@ import { App } from './App';
 createServer({
   models: {
     fazer: Model,
+    fazendo: Model,
+    finalizado: Model
   },
 
   seeds(server) {
@@ -28,6 +30,31 @@ createServer({
 
       return schema.create('fazer', data)
     })
+
+
+
+    this.get('kanban/fazendos', () => {
+      return this.schema.all('fazendo');
+    })
+
+    this.post('kanban/fazendos', (schema, request) => {
+      const data = JSON.parse(request.requestBody)
+
+      return schema.create('fazendo', data)
+    })
+
+
+
+    this.get('kanban/finalizados', () => {
+      return this.schema.all('finalizado');
+    })
+
+    this.post('kanban/finalizados', (schema, request) => {
+      const data = JSON.parse(request.requestBody)
+
+      return schema.create('finalizado', data);
+    })
+
   }
 })
 

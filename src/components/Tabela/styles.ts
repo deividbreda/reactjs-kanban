@@ -9,6 +9,10 @@ export const Content = styled.div`
         color: #000;
         font-family: 'Caveat', sans-serif;
         text-align: center;
+
+        &.verificaObjetivos{
+            color: #a5a5a5;
+        }
     }
 
     .itemConteudo {

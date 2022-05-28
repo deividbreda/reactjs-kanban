@@ -1,14 +1,20 @@
 import { Header } from './components/Header';
 import { Homepage } from './components/Homepage';
+import { FazendoProvider } from './hooks/useFazendo';
 import { FazerProvider } from './hooks/useFazer';
+import { FinalizadoProvider } from './hooks/useFinalizado';
 import { GlobalStyles } from './styles/global';
 
 export function App() {
   return (
     <FazerProvider>
-      <Header />
-      <Homepage />
-      <GlobalStyles />
+      <FazendoProvider>
+        <FinalizadoProvider>
+          <Header />
+          <Homepage />
+          <GlobalStyles />
+        </FinalizadoProvider>
+      </FazendoProvider>
     </FazerProvider>
   );
 }

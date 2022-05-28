@@ -1,7 +1,14 @@
 import { Content, ContentTable } from "./styles";
 import { FaTrashAlt, FaCheck } from "react-icons/fa";
+import { Fazer, useFazer } from "../../hooks/useFazer";
 
 export function Tabela(){
+    const { fazeres, deleteFazer } = useFazer();
+
+    function handleDeleteFazer(fazer: Fazer){
+        deleteFazer(fazer);
+    }
+
     return(
         <ContentTable>
             <Content>
@@ -9,13 +16,18 @@ export function Tabela(){
                     <div className="col col-3">
                         <div className="itemConteudo">
                             <h1> A Fazer </h1> 
-                            <div className="contentFazer">
-                                <h2> Anotar dados </h2>
-                                <div className="botoesContent">
-                                    <button> {<FaTrashAlt/>} </button>
-                                    <button> {<FaCheck/>} </button>
-                                </div>
-                            </div>
+                            {fazeres.map(fazer => {
+                                return(
+                                    <div key={fazer.id} className="contentFazer">
+                                        <h2> {fazer.aFazer} </h2>
+                                        <div className="botoesContent">
+                                            <button onClick={() => handleDeleteFazer(fazer)}> {<FaTrashAlt/>} </button>
+                                            <button> {<FaCheck/>} </button>
+                                        </div>
+                                    </div>
+                                );
+                            })}
+                            
                         </div>
                     </div>
 

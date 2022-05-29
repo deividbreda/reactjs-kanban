@@ -11,6 +11,8 @@ export const Content = styled.div`
         margin-top: 5px;
     }
 
+
+
     input {
         width: 100%;
         background: transparent;
@@ -34,6 +36,16 @@ export const Content = styled.div`
 
     h1 {
         color: #fff;
+    }
+
+    @media(max-width: 550px){
+        h1 {
+            font-size: 22px;
+        }
+
+        .insereObjetivo {
+            margin-top: 10px;
+        }
     }
 
     h2 {

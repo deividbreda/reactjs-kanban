@@ -1,3 +1,4 @@
+import { Footer } from './components/Footer';
 import { Header } from './components/Header';
 import { Homepage } from './components/Homepage';
 import { FazendoProvider } from './hooks/useFazendo';
@@ -12,6 +13,7 @@ export function App() {
         <FinalizadoProvider>
           <Header />
           <Homepage />
+          <Footer />
           <GlobalStyles />
         </FinalizadoProvider>
       </FazendoProvider>

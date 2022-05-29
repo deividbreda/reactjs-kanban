@@ -41,4 +41,14 @@ export const Content = styled.header`
             text-shadow: 1px 3px 3px #00000024;
         }
     }
+
+    @media(min-width: 30px) and (max-width: 550px){
+        h1{
+            font-size: 70px;
+        }
+
+        p {
+            font-size: 26px;
+        }
+    }
 `;

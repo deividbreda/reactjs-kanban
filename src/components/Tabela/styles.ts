@@ -62,6 +62,23 @@ export const Content = styled.div`
             border-radius: 50%;
         }
     }
+
+    @media(max-width: 728px){
+        .itemConteudo {
+            margin-bottom: 30px;
+        }
+
+        .middle {
+            border-top: 1px solid #bfbcbc;
+            border-bottom: 1px solid #bfbcbc;
+            padding: 30px 0;
+        }
+
+        .verificaObjetivos {
+            font-size: 20px;
+            padding: 0 20px;
+        }
+    }
 `;
 
 export const ContentTable = styled.div`
